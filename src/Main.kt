@@ -7,26 +7,26 @@ fun main(args: Array<String>) {
     val equilateralTriangle : Shape = EquilateralTriangle("equilateral triangle")
     val reader = Scanner(System.`in`)
 
-    println("Enter length for square: ")
+    print("Enter length for square: ")
     var length : Double = reader.nextDouble()
-    println("Enter height for square: ")
+    print("Enter height for square: ")
     var height : Double = reader.nextDouble()
     (square as Square).setDimensions(length, height)
 
-    println("Enter radius for circle: ")
+    print("Enter radius for circle: ")
     var radius : Double = reader.nextDouble()
     (circle as Circle).setDimensions(radius)
 
-    println("Enter length of side 1 for triangle: ")
+    print("Enter length of side 1 for triangle: ")
     var side1 : Double = reader.nextDouble()
-    println("Enter length of side 2 for triangle: ")
+    print("Enter length of side 2 for triangle: ")
     var side2 : Double = reader.nextDouble()
-    println("Enter length of side 3 for triangle: ")
+    print("Enter length of side 3 for triangle: ")
     var side3 : Double = reader.nextDouble()
     (triangle as Triangle).setDimensions(side1, side2, side3)
 
-    println("Enter length of 1 side for equilateral triangle: ")
-    val side : Double = reader.nextDouble()
+    print("Enter length of 1 side for equilateral triangle: ")
+    var side : Double = reader.nextDouble()
     (equilateralTriangle as EquilateralTriangle).setDimensions(side)
 
     val nameSquare = square.name.toString()
@@ -43,7 +43,8 @@ fun main(args: Array<String>) {
 
     val nameTriangle = triangle.name.toString()
     println("Name of shape: $nameTriangle")
-    println("Side 1 length of $nameTriangle: $side1, side 2 length of $triangle.name: $side2, side 3 length of $triangle.name: $side3")
+    println("Side 1 length of $nameTriangle: $side1," +
+            "side 2 length of $nameTriangle: $side2, side 3 length of $nameTriangle: $side3")
     println("Area of $nameTriangle: ${triangle.getArea()}")
     println("")
 
